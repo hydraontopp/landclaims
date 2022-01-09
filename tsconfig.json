@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "module": "ES6",
     "moduleResolution": "node",
     "target": "ES6",
-    "lib": ["ES6"],
+    "lib": ["ES2016"],
     "outDir": "dist",
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,

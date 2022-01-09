@@ -1,6 +1,6 @@
 {
   "name": "landclaims",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "beapiModule": true,
   "include": [
@@ -14,8 +14,11 @@
     "build": "tsc && beapi build",
     "bundle": "tsc && beapi bundle"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "beapi-core": "^1.4.0",
+    "beapi-core": "file:../../../../../../../../../OneDrive/Desktop/BeAPI/packages/beapi",
     "typescript": "^4.5.4"
   }
 }
