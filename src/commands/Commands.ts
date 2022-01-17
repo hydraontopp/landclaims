@@ -29,7 +29,7 @@ export class Commands {
         const check = isCordInClaim({
           x: data.sender.getLocation().x,
           z: data.sender.getLocation().z
-        }, data.sender.getName())
+        })
         if (check.is) return data.sender.sendMessage("§cYou are too close to another claim!")
         const claim = this.claims.database.addClaim(data.sender)
         data.sender.sendMessage(`§aYou have successfully set a claim at §7${claim.pos.x}, ${claim.pos.y}, ${claim.pos.z}§a.`)

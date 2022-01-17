@@ -8,6 +8,7 @@ export class Claims {
   public readonly listeners: Listeners
   public options = {
     radius: 25,
+    staffTag: "admin",
     borderParticle: "minecraft:heart_particle"
   }
 
