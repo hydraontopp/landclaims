@@ -1,5 +1,8 @@
 {
-  "name": "landclaims",
+  "name": "@mcbeutils/landclaims",
+  "author": "PMK744",
+  "repository": "https://github.com/PMK744/landclaims",
+  "homepage": "https://github.com/PMK744/landclaims",
   "version": "1.0.0",
   "main": "dist/index.js",
   "beapiModule": true,
@@ -14,11 +17,10 @@
     "build": "tsc && beapi build",
     "bundle": "tsc && beapi bundle"
   },
-  "files": [
-    "dist"
-  ],
+  "peerDependencies": {
+    "beapi-core": ">= 2.0.1"
+  },
   "dependencies": {
-    "beapi-core": "file:../../../../../../../../../OneDrive/Desktop/BeAPI/packages/beapi",
     "typescript": "^4.5.4"
   }
 }

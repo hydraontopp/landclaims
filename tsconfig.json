@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "declaration": true,
     "module": "ES6",
     "moduleResolution": "node",
     "target": "ES6",
@@ -9,7 +8,9 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "preserveConstEnums": true,
-    "sourceMap": false
+    "sourceMap": false,
+    // Set declaratoin to true when creating a module.
+    "declaration": true
   },
   "include": ["src"]
 }

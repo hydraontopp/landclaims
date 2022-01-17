@@ -1,34 +1,21 @@
-import "./listeners/index.js"
-import "./Command.js"
-import {
-  getAllClaims,
-  isCordInClaim,
-} from './utils/index.js'
+import { Database } from './database/Database.js'
+import { Commands } from './commands/Commands.js'
+import { Listeners } from './listeners/listeners.js'
 
-let claimRadius = 25
-let staffTag = "admin"
-let borderParticle = "minecraft:heart_particle"
+export class Claims {
+  public readonly database: Database
+  public readonly commands: Commands
+  public readonly listeners: Listeners
+  public options = {
+    radius: 25,
+    borderParticle: "minecraft:heart_particle"
+  }
 
-interface options {
-  claimRadius: number
-  staffTag: string
-  borderParticle: string
+  constructor () {
+    this.database = new Database()
+    this.commands = new Commands(this)
+    this.listeners = new Listeners(this)
+  }
 }
 
-function updateOptions(options: options): void {
- claimRadius = options.claimRadius
- staffTag = options.staffTag
- borderParticle = options.borderParticle
-}
-
-export {
-  claimRadius,
-  staffTag,
-  borderParticle,
-}
-
-export const Claims = {
-  updateOptions,
-  getAllClaims,
-  isCordInClaim,
-}
+export const claims = new Claims
