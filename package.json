@@ -5,6 +5,12 @@
   "homepage": "https://github.com/PMK744/landclaims",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    "import": "dist/index.js",
+    "require": "dist/index.js"
+  },
   "beapiModule": true,
   "include": [
     "scripts",
@@ -12,6 +18,9 @@
     "animation_controllers",
     "entities",
     "pack_icon.png"
+  ],
+  "files": [
+    "dist"
   ],
   "scripts": {
     "build": "tsc && beapi build",
